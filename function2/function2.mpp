@@ -1,0 +1,16 @@
+
+module;
+
+#include "function2/function2.hpp"
+
+export module function2;
+
+export namespace fu2
+{
+    using fu2::function_base;
+    using fu2::function;
+    using fu2::unique_function;
+    using fu2::function_view;
+    using fu2::capacity_fixed;
+    using fu2::capacity_default;
+}

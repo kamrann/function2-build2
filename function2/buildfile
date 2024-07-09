@@ -1,4 +1,4 @@
-liba{function2}: include/hxx{**} hxx{version}
+liba{function2}: include/hxx{**} hxx{version} mxx{function2}
 
 hxx{version}: in{version} $src_root/manifest
 

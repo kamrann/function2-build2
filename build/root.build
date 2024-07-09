@@ -5,7 +5,7 @@
 config [bool]    config.function2.enable_modules				 ?= false
 
 cxx.std = latest
-cxx.features.modules = $config.anyany.enable_modules
+cxx.features.modules = $config.function2.enable_modules
 
 using cxx
 

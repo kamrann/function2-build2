@@ -1,0 +1,6 @@
+$out_root/
+{
+  include function2/
+}
+
+export $out_root/function2/$import.target

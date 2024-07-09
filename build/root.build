@@ -1,0 +1,14 @@
+# Uncomment to suppress warnings coming from external libraries.
+#
+#cxx.internal.scope = current
+
+config [bool]    config.function2.enable_modules				 ?= false
+
+cxx.std = latest
+cxx.features.modules = $config.anyany.enable_modules
+
+using cxx
+
+hxx{*}: extension = hpp
+mxx{*}: extension = mpp
+cxx{*}: extension = cpp

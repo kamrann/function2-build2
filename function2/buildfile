@@ -1,0 +1,23 @@
+liba{function2}: include/hxx{**} hxx{version}
+
+hxx{version}: in{version} $src_root/manifest
+
+# Build options.
+#
+cxx.poptions =+ "-I$out_root" "-I$src_base/include"
+
+# Export options.
+#
+liba{function2}:
+{
+  cxx.export.poptions = "-I$out_root" "-I$src_base/include"
+}
+
+include/
+{
+	hxx{*}:
+	{
+	  install         = include/
+	  install.subdirs = true
+	}
+}

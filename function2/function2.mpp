@@ -7,10 +7,12 @@ export module function2;
 
 export namespace fu2
 {
-    using fu2::function_base;
-    using fu2::function;
-    using fu2::unique_function;
-    using fu2::function_view;
     using fu2::capacity_fixed;
     using fu2::capacity_default;
+    using fu2::function_base;
+    using fu2::function;
+    //using fu2::unique_function;
+    template <typename... Signatures>
+    using unique_function = fu2::function_base<true, false, fu2::capacity_default, true, false, Signatures...>;
+    using fu2::function_view;
 }

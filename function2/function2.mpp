@@ -7,10 +7,21 @@ export module function2;
 
 export namespace fu2
 {
+    using fu2::capacity_fixed;
+    using fu2::capacity_default;
+#if defined(_MSC_VER) && !defined(__clang__)
+    template < bool IsOwning, bool IsCopyable, typename Capacity, bool IsThrowing, bool HasStrongExceptGuarantee, typename... Signatures >
+    using function_base = fu2::function_base< IsOwning, IsCopyable, Capacity, IsThrowing, HasStrongExceptGuarantee, Signatures... >;
+    template < typename... Signatures >
+    using function = fu2::function< Signatures... >;
+    template < typename... Signatures >
+    using unique_function = fu2::unique_function< Signatures... >;
+    template < typename... Signatures >
+    using function_view = fu2::function_view< Signatures... >;
+#else
     using fu2::function_base;
     using fu2::function;
     using fu2::unique_function;
     using fu2::function_view;
-    using fu2::capacity_fixed;
-    using fu2::capacity_default;
+#endif
 }

@@ -1,4 +1,8 @@
-liba{function2}: include/hxx{**} hxx{version} mxx{function2}
+
+lib{function2}: include/hxx{**} hxx{version} mxx{function2}
+{
+  bin.binless = true
+}
 
 hxx{version}: in{version} $src_root/manifest
 

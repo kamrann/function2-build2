@@ -12,7 +12,7 @@ cxx.poptions =+ "-I$out_root" "-I$src_base/include"
 
 # Export options.
 #
-liba{function2}:
+lib{function2}:
 {
   cxx.export.poptions = "-I$out_root" "-I$src_base/include"
 }
